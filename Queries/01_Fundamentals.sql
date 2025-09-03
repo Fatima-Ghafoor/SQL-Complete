@@ -32,7 +32,7 @@ ALTER TABLE Students ALTER COLUMN Major varchar(50);
 DROP TABLE Students;
 
 /* INSERT data into Table */
-INSERT INTO Students (Fname, Lname, Major, Age, Email) VALUES ('Fahad','Khalid','Physics', 22, 'fahad@gmail.com'), ('Sara','Nasir','Mechanical', 24, 'sara@gmail.com'), ('Umer','Khan', 'Electronics', 23, 'umer@gmail.com'), ('Zainab','Amir','Mathematics','22', 'zainab@gmail.com'), ('Fariha','Asim','Mathematics',24, 'fariha@gmail.com');
+INSERT INTO Students (Fname, Lname, Major, Age, Email) VALUES ('Fahad','Khalid','Physics', 22, 'fahad@gmail.com'), ('Sara','Nasir','Mechanical', 24, 'sara@gmail.com'), ('Umer','Khan', 'Electronics', 23, 'umer@gmail.com'), ('Zainab','Amir','Mathematics', 22, 'zainab@gmail.com'), ('Fariha','Asim','Mathematics', 24, 'fariha@gmail.com');
 
 /* SELECT DATA FROM TABLE */
 /* 1) All Columns */
