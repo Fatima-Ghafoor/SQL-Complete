@@ -1,14 +1,14 @@
-/* CREATE Database */
+/* CREATE DATABASE */
 CREATE DATABASE RECORDS;
 
-/* USE Database */
+/* SELECT DATABASE */
 USE RECORDS;
 
-/* DROP Database */
+/* DROP DATABASE */
 USE master;	/* Switch to the default database first, as the current database cannot be deleted */
 DROP DATABASE RECORDS;
 
-/* CREATE Table */
+/* CREATE TABLE */
 CREATE TABLE Students(
 	ID int PRIMARY KEY IDENTITY (1,1),		/* Constraints & Properties are covered next */
 	Fname varchar(30),
@@ -28,28 +28,28 @@ ALTER TABLE Students DROP COLUMN Email;
 /* 3) Modify Datatype or Size */
 ALTER TABLE Students ALTER COLUMN Major varchar(50);
 
-/* DROP Table */
-DROP TABLE Students;
-
-/* INSERT data into Table */
+/* INSERT DATA INTO TABLE */
 INSERT INTO Students (Fname, Lname, Major, Age, Email) VALUES ('Fahad','Khalid','Physics', 22, 'fahad@gmail.com'), ('Sara','Nasir','Mechanical', 24, 'sara@gmail.com'), ('Umer','Khan', 'Electronics', 23, 'umer@gmail.com'), ('Zainab','Amir','Mathematics', 22, 'zainab@gmail.com'), ('Fariha','Asim','Mathematics', 24, 'fariha@gmail.com');
 
 /* SELECT DATA FROM TABLE */
 /* 1) All Columns */
-SELECT * from Students;
+SELECT * FROM Students;
 
 /* 2) Selected Columns */
-SELECT Fname, Lname from Students;
+SELECT Fname, Lname FROM Students;
 
 /* COLUMN ALIASES -> (writing AS is optional) */
 /* 1) Single Column */
-SELECT Fname AS FirstName from Students;
+SELECT Fname AS FirstName FROM Students;
 
 /* 2) Multiple Columns */
-SELECT Fname AS FirstName, Lname AS LastName from Students;
+SELECT Fname AS FirstName, Lname AS LastName FROM Students;
 
 /* 3) Merging Columns */
-SELECT Fname + ' ' + Lname AS FullName from Students;
+SELECT Fname + ' ' + Lname AS FullName FROM Students;
 
-/* Table ALIASE */
-SELECT s.Fname, s.Lname from Students AS s;
+/* DROP TABLE */
+DROP TABLE Students;
+
+/* TABLE ALIASE */
+SELECT s.Fname, s.Lname FROM Students AS s;
