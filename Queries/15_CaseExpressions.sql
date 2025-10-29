@@ -1,7 +1,7 @@
 /* Select Database */
 USE RECORDS;
 
-/* Tables named Students, StudentMarks & StudentsData has already been created in 01_Fundamentals.sql, 04_Filtering.sql & 09_Joins.sql */
+/* Tables named 'Students', 'StudentMarks' & 'StudentsData' have already been created in 01_Fundamentals.sql, 04_Filtering.sql & 13_Joins.sql */
 
 /* CREATE Basic CASE EXPRESSION */
 SELECT
