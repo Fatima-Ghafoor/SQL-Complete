@@ -15,23 +15,23 @@ CREATE TABLE TestEmployees(
 INSERT INTO TestEmployees (ID, Fname, Lname, Email, Age, Salary) VALUES (1, 'Fahad', 'Nasir', 'fahad@gmail.com', 34, 55000), (2, 'Samina', 'Wahab', 'samina@gmail.com', 33, 50000), (3, 'Farheen', 'Sohaib', 'farheen@gmail.com', 30, 40000), (4, 'Asmara', 'Javed', 'asmara@gmail.com', 32, 45000), (5, 'Vaniya', 'Khaid', 'vaniya@gmail.com', 32, 60000);
 
 /* CREATE INDEXES */
-/* 1) Clustered Indexes */
+/* 1) CLUSTERED INDEXES */
 CREATE CLUSTERED INDEX idx_TestEmployees_ID ON TestEmployees(ID);	/* BASIC */
 CREATE CLUSTERED INDEX idx_TestEmployees_Names ON TestEmployees(Fname, Lname);	/* COMPOSITE */
 CREATE UNIQUE CLUSTERED INDEX idx_TestEmployees_Email ON TestEmployees(Email);	/* UNIQUE */
 
-/* 2) Non-Clustered Indexes */
+/* 2) NON-CLUSTERED INDEXES */
 CREATE NONCLUSTERED INDEX idx_TestEmployees_Name ON TestEmployees(Fname);	/* BASIC */
 CREATE NONCLUSTERED INDEX idx_TestEmployees_NameAge ON TestEmployees(Fname, Age);	/* COMPOSITE */
 CREATE UNIQUE NONCLUSTERED INDEX idx_TestEmployees_Email ON TestEmployees(Email);	/* UNIQUE */
 
 /* INDEXED VIEW */
-/* Step 1: Create a View with Schema Binding */
+/* Step 1: CREATE A VIEW WITH SCHEMA BINDING */
 CREATE VIEW dbo.vw_TotalSalaryByAge WITH SCHEMABINDING AS 
 SELECT Age, SUM(ISNULL(Salary, 0)) AS TotalSalary, COUNT_BIG(*) AS TotalEmployees FROM dbo.TestEmployees GROUP BY AGE;
 GO
 
-/* Step 2: Create a Unique Clustered Index on the View */
+/* Step 2: CREATE A UNIQUE CLUSTERED INDEX ON THE VIEW */
 CREATE UNIQUE CLUSTERED INDEX IX_vw_TotalSalaryByAge ON dbo.vw_TotalSalaryByAge(Age);
 GO
 
@@ -42,10 +42,10 @@ SELECT * FROM dbo.vw_TotalSalaryByAge;	/* --same as Select data from View */
 DROP INDEX idx_TestEmployees_Name ON TestEmployees;
 
 /* CHECK INDEXES OF A: */
-/* 1) Table */
+/* 1) TABLE */
 EXEC sp_helpindex 'TestEmployees';	/* --Table Name: TestEmployees */
 
-/* 2) Database */
+/* 2) DATABASE */
 SELECT
 	i.name AS IndexName, 
 	t.name AS TableName, 
