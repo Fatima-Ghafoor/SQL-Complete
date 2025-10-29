@@ -14,6 +14,8 @@ CREATE TABLE StudentMarks(
 /* Insert data into Table */
 INSERT INTO StudentMarks (StudentID, English, Math, History) VALUES (1, 50, 67, 77), (2, 55, 60, 50), (3, 72, 98, 88);
 
+/* Table named 'Students' has already been created in 01_Fundamentals.sql */
+
 /* FILTERING with WHERE */
 /* 1) WHERE with RELATIONAL OPERATORS */
 SELECT * FROM StudentMarks WHERE English = 50;	/* EQUAL TO */
@@ -37,15 +39,14 @@ SELECT * FROM StudentMarks WHERE Math > 50 AND History < 70;	/* AND */
 SELECT * FROM StudentMarks WHERE English < 60 OR Math = 100;	/* OR */
 SELECT * FROM StudentMarks WHERE NOT History = 50;	/* NOT */
 
-/* 4) WHERE with PATTERN MATCHING OPERATORS (Table named Students has already been created in 01_Fundamentals.sql) */
-
-/* a) LIKE with Wildcards */
+/* 4) WHERE with PATTERN MATCHING OPERATORS */
+/* i) LIKE with Wildcards */
 SELECT * FROM Students WHERE Fname LIKE '%h' or'h%' or '%h%';
 SELECT * FROM Students WHERE Fname LIKE '_m%';
 SELECT * FROM Students WHERE Lname LIKE '[KN]%' or '[K-N]%';
 SELECT * FROM Students WHERE Lname LIKE '[^KS]%' OR '[!KS]%';
 
-/* b) NOT LIKE with Wildcards */
+/* ii) NOT LIKE with Wildcards */
 SELECT * FROM Students WHERE Fname NOT LIKE '%h' or'h%' or '%h%';
 SELECT * FROM Students WHERE Fname NOT LIKE '_m%';
 SELECT * FROM Students WHERE Lname NOT LIKE '[KN]%' or '[K-N]%';
