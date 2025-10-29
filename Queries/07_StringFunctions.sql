@@ -67,6 +67,19 @@ SELECT FullName, REPLICATE('*', LEN(FullName)) AS MaskedName FROM Workers;	/* Re
 /* 4) SPACE */
 SELECT FullName + SPACE(5) + JobTitle AS NameandRole FROM Workers;	/* Add fixed spaces between two fields */
 
+/* 5) STUFF */
+SELECT PhoneNumber, STUFF(PhoneNumber, 6, 4, '****') AS MaskedNumber FROM Workers;
+
+/* 6) REVERSE */
+SELECT FullName, REVERSE(FullName) AS ReverseName FROM Workers;
+
 /* FORMATTING */
 /* 1) FORMAT */
 SELECT JoiningDate, FORMAT(JoiningDate, 'dd-MM-yyyy') AS FormattedDate FROM Workers;
+
+/* SPLITTING & AGGREGATION */
+/* 1) STRING_SPLIT */
+SELECT FullName, value AS Word FROM Workers CROSS APPLY STRING_SPLIT(Remarks, ' ');
+
+/* 2) STRING_AGG */
+SELECT Country, STRING_AGG(FullName, ', ') AS Employees FROM Workers GROUP BY Country;
