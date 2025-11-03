@@ -68,18 +68,18 @@ SELECT FullName, REPLICATE('*', LEN(FullName)) AS MaskedName FROM Workers;	/* Re
 SELECT FullName + SPACE(5) + JobTitle AS NameandRole FROM Workers;	/* Add fixed spaces between two fields */
 
 /* 5) STUFF */
-SELECT PhoneNumber, STUFF(PhoneNumber, 6, 4, '****') AS MaskedNumber FROM Workers;
+SELECT PhoneNumber, STUFF(PhoneNumber, 6, 4, '****') AS MaskedNumber FROM Workers;	/* Inserts or replaces characters in a string */
 
 /* 6) REVERSE */
-SELECT FullName, REVERSE(FullName) AS ReverseName FROM Workers;
+SELECT FullName, REVERSE(FullName) AS ReverseName FROM Workers;	/* Returns the reversed value of a string */
 
 /* FORMATTING */
 /* 1) FORMAT */
-SELECT JoiningDate, FORMAT(JoiningDate, 'dd-MM-yyyy') AS FormattedDate FROM Workers;
+SELECT JoiningDate, FORMAT(JoiningDate, 'dd-MM-yyyy') AS FormattedDate FROM Workers;	/* Formats a value according to a specified format and culture */
 
 /* SPLITTING & AGGREGATION */
 /* 1) STRING_SPLIT */
-SELECT FullName, value AS Word FROM Workers CROSS APPLY STRING_SPLIT(Remarks, ' ');
+SELECT FullName, value AS Word FROM Workers CROSS APPLY STRING_SPLIT(Remarks, ' ');	/* Splits a string into rows based on a specified delimiter */
 
 /* 2) STRING_AGG */
-SELECT Country, STRING_AGG(FullName, ', ') AS Employees FROM Workers GROUP BY Country;
+SELECT Country, STRING_AGG(FullName, ', ') AS Employees FROM Workers GROUP BY Country;	/* Combines multiple string values into a single string with a specified separator */
