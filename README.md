@@ -6,17 +6,17 @@ All topics are organized step by step, without mixing concepts, for clear learni
 ## CONTENTS:
 
 **1. FUNDAMENTALS:**
-- Create, Use and Drop Database.
+- Create, Select and Drop Database.
 - Create, Alter and Drop Table.
 - Insert data into Table.
 - Select data from Table.
-- Create Table Aliase.
+- Create Table & Column Alias.
 
 **2. CONSTRAINTS:**
-- Primary Key, Foreign Key, Unique, Check, Default.
+- Primary Key, Foreign Key, Unique, Check, Default: (Add while creating & altering table).
 
 **3. PROPERTIES:**
-- Identity, Not Null, Null, Collate, Computed Column.
+- Identity, Not Null, Null, Collate, Computed Column: (Add while creating & altering table).
 
 **4. FILTERING:**
 - WHERE with Relational Operators (=, <>, !=, >, <, >=, <=).
@@ -27,42 +27,64 @@ All topics are organized step by step, without mixing concepts, for clear learni
 - WHERE with Existence Predicates Operators (EXISTS, NOT EXISTS).
 
 **5. SORTING:**
-- ORDER BY with (ASC, DESC, Expressions, Column Positions).
+- ORDER BY with (ASC, DESC, Column Position).
 
 **6. ROW LIMITING:**
-- TOP, TOP n PERCENT, WITH TIES, OFFSET … FETCH NEXT, LIMIT.
+- TOP, TOP n PERCENT, WITH TIES, OFFSET … FETCH NEXT.
 
-**7. AGGREGATE FUNCTIONS:**
+**7. STRING FUNCTIONS:**
+- Case Conversion: LOWER, UPPER.
+- Trimming & Length: TRIM, LTRIM, RTRIM, LEN.
+- Extraction: LEFT, RIGHT, SUBSTRING.
+- Searching: CHARINDEX, PATINDEX.
+- Modification: REPLACE, CONCAT, REPLICATE, SPACE, STUFF, REVERSE.
+- Formatting: FORMAT.
+- Splitting & Aggregation: STRING_SPLIT, STRING_AGG.
+
+**8. AGGREGATE FUNCTIONS:**
 - SUM, AVG, COUNT, MIN, MAX.
 
-**8. SET OPERATORS:**
+**9. SET OPERATORS:**
 - UNION, UNION ALL, INTERSECT, EXCEPT.
 
-**9. JOINS:**
+**10. NUMERIC FUNCTIONS:**
+- Basic Math: ABS, ROUND, CEILING, FLOOR.
+- Advanced Math: POWER, SQRT, EXP, LOG, SIGN, RAND.
+- Extended Math: LOG10, PI.
+
+**11. DATE & TIME FUNCTIONS:**
+- Current Date/Time: GETDATE, SYSDATETIME, CURRENT_TIMESTAMP, SYSDATETIMEOFFSET, SYSUTCDATETIME.
+- Extraction: YEAR, MONTH, DAY, DATEPART, DATENAME.
+- Calculation: DATEADD, DATEDIFF, EOMONTH, DATEFROMPARTS, DATETIMEFROMPARTS, DATETIME2FROMPARTS, SMALLDATETIMEFROMPARTS, DATETIMEOFFSETFROMPARTS, SWITCHOFFSET.
+
+**12. TYPE CONVERSION FUNCTIONS:**
+- Conversion Functions: CAST, TRY_CAST, CONVERT, TRY_CONVERT, PARSE, TRY_PARSE.
+
+**13. JOINS:**
 - INNER, LEFT, RIGHT, FULL, CROSS, SELF.
 
-**10. DATA MODIFICATION:**
+**14. DATA MODIFICATION:**
 - Update Table data by using (Basic, WHERE, JOIN, Subquery, OUTPUT).
 - Delete Table data by using (Basic, WHERE, JOIN, Subquery, OUTPUT).
 - Truncate Table.
 
-**11. CASE EXPRESSIONS:**
+**15. CASE EXPRESSIONS:**
 - CASE Expression made with (WHEN … THEN … ELSE … END).
 - CASE used with (SELECT, UPDATE, ORDER BY, JOIN, WHERE).
 
-**12. SUBQUERIES:**
+**16. SUBQUERIES:**
 - Scalar Subquery.
 - Multi-row Subquery (IN, ANY, ALL).
 - Correlated Subquery.
 
-**13. VIEWS:**
+**17. VIEWS:**
 - Create Views (Simple, Updateable).
 - Alter View (Add New Column, Change Expression Logic, Add More Columns for Display, Add Conditional Filter, Add an Alias).
 - Select data from View.
 - Drop View.
 - Check Views of a Database.
 
-**14. INDEXES:**
+**18. INDEXES:**
 - Clustered Indexes (Basic, Composite, Unique).
 - Non-Clustered Indexes (Basic, Composite, Unique).
 - Indexed View.
@@ -70,9 +92,22 @@ All topics are organized step by step, without mixing concepts, for clear learni
 - Drop Index.
 - Check Indexes of a (Table, Database).
 
-**15. PROGRAMMABILITY:**
+**19. PROGRAMMABILITY:**
 - Stored Procedures (Create: with and without Parameters, Execute, Drop, Check SPs of a Database).
 - User-Defined Functions: Scalar & Table-Valued (Create, Execute, Drop, Check Functions of a Database).
 - Triggers: AFTER, INSTEAD OF, FOR (Create, Drop, Check Triggers of a Table & Database).
 - Cursors: Static, Dynamic, Forward Only, Keyset (Declare, Open, Fetch, Close, Deallocate).
 - Benefits of Programmability (Modularity, Reusability, Security).
+
+**20. TRANSACTIONS & ERROR HANDLING:**
+- BEGIN TRAN, COMMIT, ROLLBACK with SAVEPOINTS.
+- TRY … CATCH & THROW.
+- Nested Transactions.
+- Error Handling with Transactions.
+
+**21. COMMON TABLE EXPRESSIONS (CTEs):**
+- Simple CTE.
+- Recursive CTE.
+- Multiple CTEs in one query.
+- Subquery vs CTE.
+- Hierarchical Data.
