@@ -111,3 +111,21 @@ All topics are organized step by step, without mixing concepts, for clear learni
 - Multiple CTEs in one query.
 - Subquery vs CTE.
 - Hierarchical Data.
+
+**22. SYSTEM & METADATA FUNCTIONS:**
+- System Info: @@VERSION, @@SERVERNAME, @@ROWCOUNT, @@ERROR.
+- Identity & Object Info: @@IDENTITY, SCOPE_IDENTITY, DB_ID, DB_NAME, OBJECT_ID, OBJECT_NAME.
+- Metadata Queries: INFORMATION_SCHEMA, sys.objects, sys.tables.
+
+**23. WINDOW FUNCTIONS:**
+- Row Numbering: ROW_NUMBER.
+- OVER (PARTITION BY, ORDER BY).
+- Ranking: RANK, DENSE_RANK.
+- Distribution: NTILE, PERCENTILE_CONT, PERCENTILE_DISC, CUME_DIST, PERCENT_RANK.
+- Navigation: LAG, LEAD.
+
+**24. PIVOTING & UNPIVOTING:**
+- PIVOT (Convert Rows to Columns).
+- UNPIVOT (Convert Columns to Rows).
+- Manual Pivoting using CASE WHEN.
+- Dyanmic Pivoting.
