@@ -129,3 +129,10 @@ All topics are organized step by step, without mixing concepts, for clear learni
 - UNPIVOT (Convert Columns to Rows).
 - Manual Pivoting using CASE WHEN.
 - Dyanmic Pivoting.
+
+**25. DYNAMIC SQL:**
+- EXEC.
+- sp_executesql.
+- Dynamic Queries with Parameters.
+- Dynamic Table and Column Names.
+- Security & SQL Injection Prevention.
