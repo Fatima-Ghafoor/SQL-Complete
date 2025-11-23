@@ -136,3 +136,10 @@ All topics are organized step by step, without mixing concepts, for clear learni
 - Dynamic Queries with Parameters.
 - Dynamic Table and Column Names.
 - Security & SQL Injection Prevention.
+
+**26. PARTITIONING:**
+- Partition Function.
+- Partition Scheme.
+- Partition Table.
+- Switching Partitions.
+- Querying Partitioned Tables.
