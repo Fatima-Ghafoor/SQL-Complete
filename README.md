@@ -143,3 +143,10 @@ All topics are organized step by step, without mixing concepts, for clear learni
 - Partition Table.
 - Switching Partitions.
 - Querying Partitioned Tables.
+
+**27. SECURITY & PERMISSIONS:**
+- Login (Server level).
+- Users (Database level).
+- Schema (Create, Transfer an existing table, Drop).
+- Roles (db_owner, db_securityadmin, db_accessadmin, db_ddladmin, db_datareader, db_datawriter, db_denydatareader, db_denydatawriter).
+- Permissions: GRANT, REVOKE, DENY.
